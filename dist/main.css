@@ -1,0 +1,36 @@
+body {
+  font-family: arial;
+  margin: 0;
+  padding: 24px;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.homepage-link {
+  display: block;
+}
+
+.breadcrumb {
+  color: grey;
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.year-controls {
+  margin: 16px 0 0 88px;
+}
+
+.radio {
+  margin: 0 24px 0 8px;
+}
+
+svg {
+  overflow: visible;
+}
+
+.js-data {
+  margin-top: 40px;
+}

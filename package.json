@@ -1,0 +1,32 @@
+{
+  "name": "d3ify-explorify",
+  "version": "1.0.0",
+  "description": "Display some Explorify data in with D3 ",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development",
+    "webpack-watch": "webpack --watch --mode development",
+    "start": "node src/backend/server.js",
+    "server-watch": "nodemon src/backend/server.js"
+  },
+  "author": "Peter Rhodes",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^5.7.0",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.9",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
