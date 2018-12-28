@@ -1,6 +1,8 @@
 // const basicAuth = require('express-basic-auth');
 const pageContent = require('./pageContent');
-// const isUserAuthenticated = require('./isUserAuthenticated');
+const isUserAuthenticated = require('./isUserAuthenticated');
+const setCookie = require('./setCookie');
+const searchUserInDB = require('./searchUserInDB');
 
 // const staticUserAuth = basicAuth({
 //   users: {
@@ -14,29 +16,17 @@ const routes = (app) => {
   });
 
   app.post('/login', (req, res) => {
-    const { username, password } = req.body;
-
-    // you might like to do a database look-up or something more scalable here
-    if (username && username === 'admin' && password && password === 'admin') {
-      res.redirect('/cms');
-    } else {
-      res.redirect('/');
-    }
+    searchUserInDB(req).then((data) => {
+      if (data[0]) {
+        setCookie(req, res);
+        res.redirect('/cms');
+      } else {
+        res.redirect('/');
+      }
+    });
   });
 
-  app.get('/cms', (req, res) => {
-    // const cookie = req.cookies;
-    // console.log(req);
-    // if (cookie === undefined) {
-    //   // no: set a new cookie
-    //   let randomNumber = Math.random().toString();
-    //   randomNumber = randomNumber.substring(2, randomNumber.length);
-    //   res.cookie('userCookie', randomNumber, { maxAge: 900000, httpOnly: true });
-    //   console.log('cookie created successfully');
-    // } else {
-    //   console.log('cookie exists', cookie);
-    // }
-
+  app.get('/cms', isUserAuthenticated, (req, res) => {
     res.render('cms', pageContent.cms);
   });
 };

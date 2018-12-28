@@ -5,7 +5,7 @@ const databaseDetails = {
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'explorify-2',
+  database: 'auth-mysql-cms',
 };
 
 const connectToDB = databaseQuery => new Promise((resolve, reject) => {
