@@ -4,7 +4,12 @@ block content
   each link in links
     <a class="homepage-link" href="#{link.link}">#{link.text}</a>
 
+    <br>
+    Or Signup:
+    <br>
+
   <form action="/login" method="post">
+    <h2>Login:</h2>
     <label for="username">Username</label>
     <input name="username" id="username" type="text">
     <br> <!-- Do this in css already -->
@@ -14,4 +19,21 @@ block content
     <br> <!-- Do this in css already -->
     <br>
     <button>login</button>
+  </form>
+
+  <br>
+  <br>
+  <br>
+
+  <form action="/signup" method="post">
+    <h2>Signup:</h2>
+    <label for="username">Username</label>
+    <input name="username" id="username" type="text">
+    <br> <!-- Do this in css already -->
+    <br>
+    <label for="password">Password</label>
+    <input name="password" id="password" type="password">
+    <br> <!-- Do this in css already -->
+    <br>
+    <button>signup</button>
   </form>

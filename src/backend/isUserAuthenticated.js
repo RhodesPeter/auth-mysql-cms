@@ -1,3 +1,4 @@
+// THIS FILE NOT CURRENTLY BEING USED
 const isUserAuthenticated = (req, res, next) => {
   // CHECK THE USER STORED IN SESSION
   const { cookie } = req.headers;
