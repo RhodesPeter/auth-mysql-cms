@@ -18,19 +18,3 @@ body {
   margin-bottom: 8px;
   text-decoration: none;
 }
-
-.year-controls {
-  margin: 16px 0 0 88px;
-}
-
-.radio {
-  margin: 0 24px 0 8px;
-}
-
-svg {
-  overflow: visible;
-}
-
-.js-data {
-  margin-top: 40px;
-}
