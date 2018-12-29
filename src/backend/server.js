@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const routes = require('./routes');
 
 const app = express();
@@ -12,6 +13,8 @@ app.set('view engine', 'pug');
 // To parse POST request data/body
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(cookieParser());
+
 // Serve all files in the 'dist' folder
 app.use('/', express.static(path.join(__dirname, '/../../dist')));
 
@@ -19,4 +22,4 @@ app.use('/', express.static(path.join(__dirname, '/../../dist')));
 routes(app);
 
 // Start server
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`App listening on port ${port}!`));
