@@ -1,0 +1,15 @@
+extends index.pug
+
+block breadcrumbs
+  <a class="breadcrumb" href="/">&larr; home</a>
+
+block content  
+  <form action="/signup" method="post">
+    <label class="signup-label" class="login-label" for="signup-username">Username</label>
+    <input class="signup-input" class="login-label" name="username" id="signup-username" type="text">
+
+    <label class="signup-label" for="signup-password">Password</label>
+    <input class="signup-input" name="password" id="signup-password" type="password">
+
+    <button>signup</button>
+  </form>

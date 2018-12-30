@@ -8,13 +8,32 @@ body {
   margin-top: 0;
 }
 
-.homepage-link {
-  display: block;
-}
-
 .breadcrumb {
   color: grey;
   display: block;
   margin-bottom: 8px;
   text-decoration: none;
+}
+
+.homepage-title-link {
+  text-decoration: none;
+  color: black;
+}
+
+.homepage-link {
+  margin-right: 16px;
+}
+
+.cms-input,
+.login-input,
+.signup-input {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.cms-label,
+.login-label,
+.signup-label {
+  display: inline-block;
+  margin-bottom: 8px;
 }

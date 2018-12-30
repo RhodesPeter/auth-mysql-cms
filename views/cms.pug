@@ -4,4 +4,22 @@ block breadcrumbs
     <a class="breadcrumb" href="/">&larr; home</a>
 
 block content
-    <p>This should only be accessible with a password</p>
+    <p>Hello #{userDetails.username}</p>
+    
+    <h2>Update the content on the blog page</h2>
+    
+    <form action="/update-blog-content" method="post">
+      <label class="cms-label" for="blog-title">Blog title:</label>
+      <input class="cms-input" name="blog-title" id="blog-title" type="text" value="#{blogTitle}">
+
+      <label class="cms-label" for="blog-paragraph-1">Paragraph one:</label>
+      <input class="cms-input" class="cms-input" name="blog-paragraph-1" id="blog-paragraph-1" type="text" value="#{blogParagraphOne}">
+
+      <label class="cms-label" for="blog-paragraph-2">Paragraph two:</label>
+      <input class="cms-input" name="blog-paragraph-2" id="blog-paragraph-2" type="text" value="#{blogParagraphTwo}">
+
+      <label class="cms-label" for="blog-paragraph-3">Paragraph three:</label>
+      <input class="cms-input" name="blog-paragraph-3" id="blog-paragraph-3" type="text" value="#{blogParagraphThree}">
+
+      <button>update blog</button>
+    </form>

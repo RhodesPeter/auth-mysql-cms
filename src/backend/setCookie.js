@@ -10,7 +10,7 @@ const setCookie = (req, res, username) => {
     const token = jwt.sign({ username }, jwtSecret);
 
     res.cookie('sessionToken', token, {
-      maxAge: 90000,
+      maxAge: 900000,
       httpOnly: true,
     });
   }

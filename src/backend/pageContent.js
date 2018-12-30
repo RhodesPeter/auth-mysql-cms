@@ -2,7 +2,9 @@ const pageContent = {
   homepage: {
     title: 'Homepage',
     links: [
-      // { link: '/login', text: 'login' },
+      { link: '/blogpage', text: 'blog' },
+      { link: '/login', text: 'login' },
+      { link: '/signup', text: 'signup' },
     ],
   },
   login: {
@@ -10,6 +12,9 @@ const pageContent = {
   },
   cms: {
     title: 'CMS',
+  },
+  signup: {
+    title: 'Sign up here',
   },
 };
 

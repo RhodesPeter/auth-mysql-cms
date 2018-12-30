@@ -1,0 +1,8 @@
+extends index.pug
+
+block breadcrumbs
+  <a class="breadcrumb" href="/">&larr; home</a>
+
+block content  
+  each paragraph in paragraphs
+    <p>#{paragraph}</p>
